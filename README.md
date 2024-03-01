@@ -43,9 +43,10 @@ Undervejs:
 - **[Desktop]**: Main styles til grid. 
 - **[CTA]**: Call to action styles og al navigation ses igennem. 
 - **[Billeder]**: Overvej om billeder skal skiftes til PNG? Det er som om alt er langsomt om at uploade. 
+- **[scss]**: Tjek scss igennem, er der noget der kan formindskes? 
 
 ## Gruppe 1
 
 Jonas Laursen, Ines Johanson, Emma Madsen og Linn Ljungar; dkmmd23c2o. Februar-marts 2024. 
-https://github.com/LLjungar/bloommedia.git
+https://github.com/LLjungar/s2t1mymultimedia.git
 
