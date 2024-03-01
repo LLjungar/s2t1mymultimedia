@@ -1,48 +1,44 @@
+@charset "UTF-8";
 /*Variabler*/
 /*Mixins*/
-@media screen and (max-width: 768px) {
-  body {
-    font-family: "open sans";
-    background-color: #000000;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body p {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 1.5;
-  }
-  body h1, body h2, body h3, body h4, body h5, body h6, body a {
-    font-weight: 600;
-    color: #ffffff;
-  }
-  body img {
-    max-width: 100%;
-    height: auto;
-  }
+.cta {
+  display: inline-block; /* Gør elementet til en blok, men beholder den i linjen */
+  padding: 10px 38px; /* Tilføjer intern plads til knappen */
+  background-color: #B0D0FF;
+  color: #000000; /* Tekstfarven på knappen */
+  text-decoration: none; /* Fjerner eventuelle understregninger */
+  border-radius: 1px; /* Afrundede hjørner */
+  border: 2px solid #B0D0FF;
+  transition: background-color 0.3s ease; /* Tilføjer en glat overgangseffekt */
 }
+.cta:hover {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+body {
+  font-family: "open sans";
+  background-color: #000000;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body a {
+  font-weight: 400;
+  color: #ffffff;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 768px) {
-  body {
-    font-family: "open sans";
-    background-color: #000000;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body p {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 1.5;
-  }
-  body h1, body h2, body h3, body h4, body h5, body h6, body a {
-    font-weight: 600;
-    color: #ffffff;
-  }
-  body img {
-    max-width: 100%;
-    height: auto;
-  }
   header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

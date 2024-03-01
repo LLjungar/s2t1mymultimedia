@@ -23,3 +23,9 @@ $breakpoint-ipad: 768px; //Her er skellet mellem iphone, ipad og derefter deskto
     grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker
   }
 
+@mixin two-column-grid($column-gap: 10px, $row-gap: 10px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker
+  }
+
