@@ -20,7 +20,7 @@ En log over ændringer foretaget i løbet af projektets udvikling. Omfatter dato
 - **[20/Linn]**: Konfigureret Live Sass Compiler via `.vscode/settings.json` til automatisk at kompilere SCSS til CSS i `/css`-mappen.
 - **[21/Linn]**: Alle HTML-sider oprettet ud fra Figma prototype og sat op med det semantiske HTML-element "section". Det har vi gjort for at organisere indholdet på en struktureret måde. Det bør derfor være lettere for både os og besøgende at forstå, hvordan indholdet er organiseret. 
 
-### Februar 2024
+### Marts 2024
 
 - **[1/Linn]**: Færdiggører vores nye version. Vi har skubbet kodedelen af projektet lidt for at få det sidste undervisning med. Selvom vi er tættere på deadline, er det langt mere overskueligt nu. Jeg opretter derfor også et nyt res på github til projektet, så vi kan holde det helt adskilt fra vores gamle struktur. Det meste indhold er sat ind. Jeg fortsætter på søndag, så basen er klar til på mandag hvor vi alle sidder sammen, med hver vores dele; se fremtidige forbedringer. 
 
@@ -38,6 +38,11 @@ Overordnet:
 
 Undervejs:
 - **[style-række-49]**: Navigation hælder fortsat til venstre i midten af header. Er ellers centreret både vand- og lodret?
+- **[Mobilversion]**: Header og Footer oprettes i mobilversion. 
+- **[Mobilversion]**: Main styles til mobil. 
+- **[Desktop]**: Main styles til grid. 
+- **[CTA]**: Call to action styles og al navigation ses igennem. 
+- **[Billeder]**: Overvej om billeder skal skiftes til PNG? Det er som om alt er langsomt om at uploade. 
 
 ## Gruppe 1
 
