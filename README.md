@@ -23,6 +23,7 @@ En log over ændringer foretaget i løbet af projektets udvikling. Omfatter dato
 ### Marts 2024
 
 - **[1/Linn]**: Færdiggører vores nye version. Vi har skubbet kodedelen af projektet lidt for at få det sidste undervisning med. Selvom vi er tættere på deadline, er det langt mere overskueligt nu. Jeg opretter derfor også et nyt res på github til projektet, så vi kan holde det helt adskilt fra vores gamle struktur. Det meste indhold er sat ind. Jeg fortsætter på søndag, så basen er klar til på mandag hvor vi alle sidder sammen, med hver vores dele; se fremtidige forbedringer. 
+- **[1/Linn]**: CTA-knapper stylet, overskrifter stylet og fikset på index. Footer og header er stadig kun opdateret på Index. 
 
 ## Fremtidige Forbedringer
 
@@ -44,6 +45,8 @@ Undervejs:
 - **[CTA]**: Call to action styles og al navigation ses igennem. 
 - **[Billeder]**: Overvej om billeder skal skiftes til PNG? Det er som om alt er langsomt om at uploade. 
 - **[scss]**: Tjek scss igennem, er der noget der kan formindskes? 
+- **[brugervenlighed]**: Udfyld meningsfuld alt= på indhold. 
+- **[brugervenlighed]**: Ret alle H1'ere så alle siders overskrifter er i orden.  
 
 ## Gruppe 1
 

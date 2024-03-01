@@ -23,15 +23,38 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Stilarter for overskrifter */
 }
 body p {
   font-size: 16px;
   color: #ffffff;
   line-height: 1.5;
 }
-body h1, body h2, body h3, body h4, body h5, body h6, body a {
+body h1, body h2, body h3, body h4 {
   font-weight: 400;
   color: #ffffff;
+  font-size: 20px; /* Ændret størrelse til 20 punkt */
+  margin-left: 150px; /* Tilføjet en venstre margin */
+  position: relative; /* Gør overskriften relativt positioneret */
+}
+body h5, body h6 {
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+}
+body h1:before, body h2:before, body h3:before, body h4:before {
+  content: "";
+  position: absolute;
+  width: 30px; /* Bredden af den vandrette linje */
+  height: 0.5px; /* Højden af den vandrette linje */
+  background-color: #fff; /* Farven på linjen */
+  top: 50%; /* Justerer linjens vertikale position */
+  left: -45px; /* Placerer linjen til venstre for teksten */
+  transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
+}
+body a {
+  text-decoration: none;
+  color: #fff;
 }
 body img {
   max-width: 100%;
@@ -80,9 +103,6 @@ body img {
     grid-gap: 20px 20px;
     margin: 2em;
   }
-  footer a {
-    text-decoration: none;
-  }
   footer .logo-footer {
     grid-column: span 1;
     grid-row: 1;
@@ -109,5 +129,8 @@ body img {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 5em;
+  }
+  footer .social a {
+    margin: 0 10px;
   }
 }/*# sourceMappingURL=style.css.map */
