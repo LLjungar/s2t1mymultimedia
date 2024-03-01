@@ -1,0 +1,25 @@
+// Genanvendelige værdier: farver, skrifttyper, afstande. Fungerer som i Figma. Fx CTA-knappens farve.
+
+/*Variabler*/
+$bg-color: #000000; 
+$nav-color: #ffffff;
+$cta-color: #B0D0FF;
+$hover-color: #000000;
+$yellow: #FFD392; 
+$red: #FFDBE5;
+$blue: #B0D0FF;
+$secondary-color: #ffffff;
+$text-color: #ffffff;
+$padding: 0.5em;
+$font: 'open sans';
+
+$breakpoint-ipad: 768px; //Her er skellet mellem iphone, ipad og derefter desktop. Sitet er ikke så kompliceret at det er nødvendigt med en særkilt opsætning til ipad
+
+
+/*Mixins*/
+@mixin three-column-grid($column-gap: 20px, $row-gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker
+  }
+

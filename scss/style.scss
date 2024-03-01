@@ -1,0 +1,162 @@
+@use 'partial';
+
+// Mobilvisning (skærme op til $breakpoint-ipad)
+@media screen and (max-width: partial.$breakpoint-ipad) {
+  // Tilpasninger for mobilvisning
+  body {
+      // Mobilvenlige stilarter
+      font-family: partial.$font;
+      background-color: partial.$bg-color;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+        p{
+            font-size: 16px;
+            color: partial.$text-color;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, h5, h6, a{
+            font-weight: 600;
+            color: partial.$text-color;
+        }
+
+    img{
+    max-width: 100%;
+    height: auto;
+    }
+}
+  header {
+      // Tilpasninger for header på mobil
+  }
+
+  main {
+      // Tilpasninger for hovedsektionen på mobil
+  }
+
+  footer {
+      // Tilpasninger for footer på mobil
+  }
+}
+
+
+// Desktopvisning (skærme større end $breakpoint-ipad)
+@media screen and (min-width: partial.$breakpoint-ipad) {
+  // Tilpasninger for desktopvisning
+  body {
+    // Mobilvenlige stilarter
+    font-family: partial.$font;
+    background-color: partial.$bg-color;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+      p{
+          font-size: 16px;
+          color: partial.$text-color;
+          line-height: 1.5;
+      }
+
+      h1, h2, h3, h4, h5, h6, a{
+          font-weight: 600;
+          color: partial.$text-color;
+      }
+
+   img{
+   max-width: 100%;
+   height: auto;
+   }
+}
+
+header {
+  @include partial.three-column-grid(20px, 20px); // vores mixin 
+  
+  .logo-header {
+    grid-column: span 1; // Tag 1 kolonneplads
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .desktop-nav {
+      grid-column: span 1;
+      display: flex;
+      align-items: center; // Centrerer elementer lodret
+     
+      ul {
+        list-style: none; // Fjerner punktopstilling fra listen
+        padding: 0; // Fjerner padding fra listen
+        display: flex; // Gør listen til en fleksibel container
+        justify-content: center; // Centrerer elementer horisontalt    Navigation hælder til venstre
+        li {
+          margin-right: 20px; // Juster margen mellem elementer
+          a {
+            text-decoration: none;
+            &:hover {
+              color: partial.$red; // Ændrer farven ved hover
+            }
+          }
+        }
+      }
+    }
+
+  .linkedin {
+    grid-column: span 1; // Tag 1 kolonneplads
+    display: flex;
+    justify-content: flex-end;
+  }  
+}
+
+main {
+      // Tilpasninger for hovedsektionen på desktop
+  }
+
+footer {
+    @include partial.three-column-grid(20px, 20px); // vores mixin 
+    margin: 2em;
+
+  a {
+    text-decoration: none;
+  }
+  
+    .logo-footer {
+      grid-column: span 1; // Tag 1 kolonneplads
+      grid-row: 1; // Læg logo i første række
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .contact {
+      grid-column: 1 / span 1; // Eller hvilken kolonne du ønsker .contact til at være i
+      display: flex;
+      flex-direction: column; // Stabler indholdet vertikalt
+      align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
+      margin-left: 5em;
+    }
+
+
+    .services {
+      grid-column: 2 / span 1; // Eller hvilken kolonne du ønsker .contact til at være i
+      display: flex;
+      flex-direction: column; // Stabler indholdet vertikalt
+      align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
+      margin-left: 5em;
+    }
+
+    .more {
+      grid-column: 3 / span 1; // Eller hvilken kolonne du ønsker .contact til at være i
+      display: flex;
+      flex-direction: column; // Stabler indholdet vertikalt
+      align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
+      margin-left: 5em;
+    }
+
+    //lav margin på alle klasser
+
+   
+   
+}
+}
+
+
+
