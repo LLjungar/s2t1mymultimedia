@@ -1,77 +1,7 @@
 @use 'partial';
+@use 'cta';
+@use 'base';
 
-// Knapper 
-
-.cta {
-  display: inline-block; /* Gør elementet til en blok, men beholder den i linjen */
-  padding: 10px 38px; /* Tilføjer intern plads til knappen */
-  background-color: partial.$cta-color;
-  color: #000000; /* Tekstfarven på knappen */
-  text-decoration: none; /* Fjerner eventuelle understregninger */
-  border-radius: 1px; /* Afrundede hjørner */
-  border: 2px solid partial.$cta-color; 
-
-  transition: background-color 0.3s ease; /* Tilføjer en glat overgangseffekt */
-
-  &:hover {
-    background-color: #000; // Baggrundsfarven ændres til sort
-    color: #fff; // Tekstfarven ændres til hvid
-    border: 2px solid #fff; 
-}
-}
-
-body {
-  // Mobilvenlige stilarter
-  font-family: partial.$font;
-  background-color: partial.$bg-color;
-  box-sizing: border-box;
-  margin: 4 auto;
-  padding: 0;
-  }
-
-
-  p{
-    font-size: 20px;
-    line-height: 1.5;
-    color: partial.$text-color;
- }
-
-
-    /* Stilarter for overskrifter */
-h1, h2, h3, h4 {
-  font-weight: 400;
-  color: partial.$text-color;
-  font-size: 20px; /* Ændret størrelse til 20 punkt */
-  margin-left: 150px; /* Tilføjet en venstre margin */
-  position: relative; /* Gør overskriften relativt positioneret */
-}
-
-h5, h6 {
-  font-weight: 400;
-  color: partial.$text-color;
-  font-size: 20px; 
-}
-
-h1:before, h2:before, h3:before, h4:before {
-  content: "";
-  position: absolute;
-  width: 30px; /* Bredden af den vandrette linje */
-  height: 0.5px; /* Højden af den vandrette linje */
-  background-color: #fff; /* Farven på linjen */
-  top: 50%; /* linjens vertikale position */
-  left: -45px; /* Placerer linjen til venstre for teksten */
-  transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-img{
-max-width: 100%;
-height: auto;
-}
 
 // Mobilvisning
 @include respond-to("mobile") {
@@ -95,6 +25,8 @@ height: auto;
 
 header {
   @include partial.three-column-grid(20px, 20px); // vores mixin 
+  margin: 20px;
+  align-items: center;
   
   .logo-header {
     grid-column: span 1; // Tag 1 kolonneplads
@@ -106,14 +38,14 @@ header {
       grid-column: span 1;
       display: flex;
       align-items: center; // Centrerer elementer lodret
-     
+      justify-content: center;
       ul {
         list-style: none; // Fjerner punktopstilling fra listen
         padding: 0; // Fjerner padding fra listen
         display: flex; // Gør listen til en fleksibel container
-        justify-content: center; // Centrerer elementer horisontalt    Navigation hælder til venstre
-        li {
-          margin-right: 20px; // Juster margen mellem elementer
+
+        .desktop-nav a {
+          transition: color 0.3s ease; // Glat farveskift ved hover
           a {
             text-decoration: none;
             &:hover {
@@ -128,6 +60,7 @@ header {
     grid-column: span 1; // Tag 1 kolonneplads
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }  
 }
 
@@ -181,7 +114,14 @@ main {
   @include partial.three-column-grid;
   justify-content: center;
   max-width: 100%;
-}   
+}  
+
+video {
+  width: 100%; /* Videoen fylder hele bredden af dens container */
+  height: auto; /* Beholder det originale højde-bredde-forhold */
+  grid-column: span 3; /* Videoen strækker sig over tre kolonner */
+}
+
 }
 
   footer {

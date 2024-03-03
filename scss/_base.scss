@@ -1,0 +1,56 @@
+@use 'partial';
+
+
+body {
+    // Mobilvenlige stilarter
+    font-family: partial.$font;
+    background-color: partial.$bg-color;
+    box-sizing: border-box;
+    margin: 4 auto;
+    padding: 0;
+    }
+  
+  
+    p{
+      font-size: 20px;
+      line-height: 1.5;
+      color: partial.$text-color;
+   }
+  
+  
+      /* Stilarter for overskrifter */
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    color: partial.$text-color;
+    font-size: 20px; /* Ændret størrelse til 20 punkt */
+    margin-left: 150px; /* Tilføjet en venstre margin */
+    position: relative; /* Gør overskriften relativt positioneret */
+  }
+  
+  h5, h6 {
+    font-weight: 400;
+    color: partial.$text-color;
+    font-size: 20px; 
+  }
+  
+  h1:before, h2:before, h3:before, h4:before {
+    content: "";
+    position: absolute;
+    width: 30px; /* Bredden af den vandrette linje */
+    height: 0.5px; /* Højden af den vandrette linje */
+    background-color: #fff; /* Farven på linjen */
+    top: 50%; /* linjens vertikale position */
+    left: -45px; /* Placerer linjen til venstre for teksten */
+    transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  img{
+  max-width: 100%;
+  height: auto;
+  }
+  

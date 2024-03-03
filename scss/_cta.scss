@@ -1,0 +1,22 @@
+@use 'partial';
+
+// Knapper 
+
+.cta {
+    display: inline-block; /* Gør elementet til en blok, men beholder den i linjen */
+    padding: 10px 38px; /* Tilføjer intern plads til knappen */
+    background-color: partial.$cta-color;
+    color: #000000; /* Tekstfarven på knappen */
+    text-decoration: none; /* Fjerner eventuelle understregninger */
+    border-radius: 1px; /* Afrundede hjørner */
+    border: 2px solid partial.$cta-color; 
+  
+    transition: background-color 0.3s ease; /* Tilføjer en glat overgangseffekt */
+  
+    &:hover {
+      background-color: #000; // Baggrundsfarven ændres til sort
+      color: #fff; // Tekstfarven ændres til hvid
+      border: 2px solid #fff; 
+  }
+  }
+  
