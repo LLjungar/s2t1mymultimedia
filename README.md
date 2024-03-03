@@ -25,6 +25,10 @@ En log over ændringer foretaget i løbet af projektets udvikling. Omfatter dato
 - **[1/Linn]**: Færdiggører vores nye version. Vi har skubbet kodedelen af projektet lidt for at få det sidste undervisning med. Selvom vi er tættere på deadline, er det langt mere overskueligt nu. Jeg opretter derfor også et nyt res på github til projektet, så vi kan holde det helt adskilt fra vores gamle struktur. Det meste indhold er sat ind. Jeg fortsætter på søndag, så basen er klar til på mandag hvor vi alle sidder sammen, med hver vores dele; se fremtidige forbedringer. 
 - **[1/Linn]**: CTA-knapper stylet, overskrifter stylet og fikset på index. Footer og header er stadig kun opdateret på Index. 
 
+- **[3/Linn]**: Desktop er mere eller mindre sat op. Kasserne er formgivet og stylet så de passer til tekst og billeder. Grid ligeså. Kæmper lidt med margin over alt og header i mobilversionen... Så der fortsætter jeg i morgen.  
+
+
+
 ## Fremtidige Forbedringer
 
 En liste over planlagte eller ønskede forbedringer til projektet. Dette afsnit hjælper os med at holde styr på ideer og prioriteringer for fremtidig udvikling:
@@ -47,7 +51,8 @@ Undervejs:
 - **[scss]**: Tjek scss igennem, er der noget der kan formindskes? 
 - **[brugervenlighed]**: Udfyld meningsfuld alt= på indhold. 
 - **[brugervenlighed]**: Ret alle H1'ere så alle siders overskrifter er i orden.  
-- **[styling]**: p, p, p, omg. Knapper og tekst centreres. De tager ikke imod margin. Har brug for alternativ til "<br>"
+- **[styling]**: p, p, p, omg. Knapper og tekst centreres. De tager ikke imod margin. Har brug for alternativ til br. 
+- **[mobil-header]**: Der sidder en regel fast et sted der forhindrer sass compiler i at oprette den rigtige css. Start med at løse det. 
 
 ## Gruppe 1
 

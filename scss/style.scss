@@ -8,28 +8,6 @@
   
   header {
       // Tilpasninger for header på mobil
-      display: flex;
-        justify-content: space-between; // Fordeler pladsen mellem logo og menu
-        align-items: center;
-        padding: 10px; // Tilføj lidt padding for et bedre udseende
-        
-        .logo-header {
-            flex: 1; // Giver logoet plads til at vokse, holder det til venstre
-        }
-
-        .desktop-nav {
-            flex: 2; // Giver navigationsmenuen mere plads hvis nødvendigt
-            justify-content: flex-end;
-
-            ul {
-                flex-direction: column; // Stacker menu punkterne vertikalt
-                display: none; // Skjuler menuen som udgangspunkt (for burgermenu)
-            }
-        }
-
-        .linkedin {
-            display: none; // Skjuler LinkedIn ikonet i mobilvisning
-        }
   }
 
   main {
@@ -65,7 +43,7 @@ header {
         list-style: none; // Fjerner punktopstilling fra listen
         padding: 0; // Fjerner padding fra listen
         display: flex; // Gør listen til en fleksibel container
-      }
+      
 
         .desktop-nav a {
           transition: color 0.3s ease; // Glat farveskift ved hover
@@ -178,4 +156,5 @@ video {
     .social a {
       margin: 0 10px;
     }
+}
 }
