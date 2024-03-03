@@ -47,6 +47,7 @@ Undervejs:
 - **[scss]**: Tjek scss igennem, er der noget der kan formindskes? 
 - **[brugervenlighed]**: Udfyld meningsfuld alt= på indhold. 
 - **[brugervenlighed]**: Ret alle H1'ere så alle siders overskrifter er i orden.  
+- **[styling]**: p, p, p, omg. Knapper og tekst centreres. De tager ikke imod margin. Har brug for alternativ til "<br>"
 
 ## Gruppe 1
 

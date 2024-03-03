@@ -1,6 +1,7 @@
 @use 'partial';
 
 // Knapper 
+
 .cta {
   display: inline-block; /* Gør elementet til en blok, men beholder den i linjen */
   padding: 10px 38px; /* Tilføjer intern plads til knappen */
@@ -26,12 +27,15 @@ body {
   box-sizing: border-box;
   margin: 4 auto;
   padding: 0;
+  }
 
-    p{
-        font-size: 20px;
-        color: partial.$text-color;
-        line-height: 1.5;
-    }
+
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: partial.$text-color;
+ }
+
 
     /* Stilarter for overskrifter */
 h1, h2, h3, h4 {
@@ -68,7 +72,6 @@ img{
 max-width: 100%;
 height: auto;
 }
-}
 
 // Mobilvisning
 @include respond-to("mobile") {
@@ -79,36 +82,7 @@ height: auto;
 
   main {
     // Tilpasninger for hovedsektionen på desktop
-
-    .box {
-      width: 390px;
-      height: 390px;
-      background-color: #FFD392;
-      padding: 20px;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column; /* Stabler indholdet vertikalt */
-      justify-content: center; /* Centrerer indholdet vertikalt */
-      text-align: left; /* Venstrevendt tekst */
   }
-  
-  p {
-      color: black;
-      max-width: 90%; /* Sætter en maksimal bredde for teksten */
-      text-align: left; /* Centrerer teksten */
-      margin: 20px;
-  }
-
-  h6 {
-    color: black;
-    font-size: 20px; /* Tilpas størrelsen efter behov */
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin: 20px;
-  }
-  
-  
-}
 
   footer {
       // Tilpasninger for footer på mobil
@@ -159,6 +133,12 @@ header {
 
 main {
 // Tilpasninger for hovedsektionen på desktop
+
+> * { // Dette vil målrette alle direkte børn af main
+  margin-top: 20px; // Tilføjer plads over elementet
+  margin-bottom: 20px; // Tilføjer plads under elementet
+}
+
 .box {
   width: 422px;
   height: 429px;
@@ -175,14 +155,14 @@ main {
 .box-blue { background-color: partial.$blue; }
 
 // Tekststil
-p {
+.box p {
   max-width: 90%;
   text-align: left;
   margin: 20px;
   color: black; // ny tekstfarve
 }
 
-h6 {
+.box h6 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;

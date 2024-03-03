@@ -1,6 +1,7 @@
 // Genanvendelige værdier: farver, skrifttyper, afstande. Fungerer som i Figma. Fx CTA-knappens farve.
 
 /*Variabler*/
+
 $bg-color: #000000; 
 $nav-color: #ffffff;
 $cta-color: #B0D0FF;
@@ -10,8 +11,13 @@ $red: #FFDBE5;
 $blue: #B0D0FF;
 $secondary-color: #ffffff;
 $text-color: #ffffff;
+$text-color-box: black; 
 $padding: 0.5em;
 $font: 'open sans';
+
+
+
+/*Mixins*/
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "mobile" {
@@ -23,8 +29,6 @@ $font: 'open sans';
   }
 }
 
-
-/*Mixins*/
 @mixin three-column-grid($column-gap: 4px, $row-gap: 4px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
