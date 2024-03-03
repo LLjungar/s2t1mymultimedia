@@ -13,11 +13,19 @@ $text-color: #ffffff;
 $padding: 0.5em;
 $font: 'open sans';
 
-$breakpoint-ipad: 768px; //Her er skellet mellem iphone, ipad og derefter desktop. Sitet er ikke så kompliceret at det er nødvendigt med en særkilt opsætning til ipad
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: 767px) { @content; } // Mobil enheder
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; } // Desktop og op til 1199px
+  } @else if $breakpoint == "large-desktop" {
+    @media (min-width: 1200px) { @content; } // Større end 1200px (store skærme)
+  }
+}
 
 
 /*Mixins*/
-@mixin three-column-grid($column-gap: 20px, $row-gap: 20px) {
+@mixin three-column-grid($column-gap: 4px, $row-gap: 4px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker

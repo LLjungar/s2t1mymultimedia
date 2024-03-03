@@ -18,7 +18,7 @@ En log over ændringer foretaget i løbet af projektets udvikling. Omfatter dato
 
 - **[20/Linn]**: Tilføjet grundlæggende projektstruktur med HTML, SCSS, og CSS mapper og oprettede GitHub Res.
 - **[20/Linn]**: Konfigureret Live Sass Compiler via `.vscode/settings.json` til automatisk at kompilere SCSS til CSS i `/css`-mappen.
-- **[21/Linn]**: Alle HTML-sider oprettet ud fra Figma prototype og sat op med det semantiske HTML-element "section". Det har vi gjort for at organisere indholdet på en struktureret måde. Det bør derfor være lettere for både os og besøgende at forstå, hvordan indholdet er organiseret. 
+- **[21/Linn]**: Alle HTML-sider oprettet ud fra Figma prototype og sat op med det semantiske HTML-element "section". Det har vi gjort for at organisere indholdet på en struktureret måde. Det bør derfor være lettere for både os og besøgende at forstå, hvordan indholdet er organiseret.  
 
 ### Marts 2024
 

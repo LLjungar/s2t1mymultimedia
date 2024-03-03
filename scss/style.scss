@@ -24,11 +24,11 @@ body {
   font-family: partial.$font;
   background-color: partial.$bg-color;
   box-sizing: border-box;
-  margin: 0;
+  margin: 4 auto;
   padding: 0;
 
     p{
-        font-size: 16px;
+        font-size: 20px;
         color: partial.$text-color;
         line-height: 1.5;
     }
@@ -54,7 +54,7 @@ h1:before, h2:before, h3:before, h4:before {
   width: 30px; /* Bredden af den vandrette linje */
   height: 0.5px; /* Højden af den vandrette linje */
   background-color: #fff; /* Farven på linjen */
-  top: 50%; /* Justerer linjens vertikale position */
+  top: 50%; /* linjens vertikale position */
   left: -45px; /* Placerer linjen til venstre for teksten */
   transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
 }
@@ -70,17 +70,45 @@ height: auto;
 }
 }
 
-// Mobilvisning (skærme op til $breakpoint-ipad)
-@media screen and (max-width: partial.$breakpoint-ipad) {
-  // Tilpasninger for mobilvisning
+// Mobilvisning
+@include respond-to("mobile") {
   
   header {
       // Tilpasninger for header på mobil
   }
 
   main {
-      // Tilpasninger for hovedsektionen på mobil
+    // Tilpasninger for hovedsektionen på desktop
+
+    .box {
+      width: 390px;
+      height: 390px;
+      background-color: #FFD392;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column; /* Stabler indholdet vertikalt */
+      justify-content: center; /* Centrerer indholdet vertikalt */
+      text-align: left; /* Venstrevendt tekst */
   }
+  
+  p {
+      color: black;
+      max-width: 90%; /* Sætter en maksimal bredde for teksten */
+      text-align: left; /* Centrerer teksten */
+      margin: 20px;
+  }
+
+  h6 {
+    color: black;
+    font-size: 20px; /* Tilpas størrelsen efter behov */
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin: 20px;
+  }
+  
+  
+}
 
   footer {
       // Tilpasninger for footer på mobil
@@ -88,9 +116,8 @@ height: auto;
 }
 
 
-// Desktopvisning (skærme større end $breakpoint-ipad)
-@media screen and (min-width: partial.$breakpoint-ipad) {
-  // Tilpasninger for desktopvisning
+// Desktopvisning
+@include respond-to("desktop") {
 
 header {
   @include partial.three-column-grid(20px, 20px); // vores mixin 
@@ -131,50 +158,82 @@ header {
 }
 
 main {
-      // Tilpasninger for hovedsektionen på desktop
-  }
+// Tilpasninger for hovedsektionen på desktop
+.box {
+  width: 422px;
+  height: 429px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
 
-footer {
-    @include partial.three-column-grid(20px, 20px); // vores mixin 
+// Farvevariationer
+.box-yellow { background-color: partial.$yellow; }
+.box-red { background-color: partial.$red; }
+.box-blue { background-color: partial.$blue; }
+
+// Tekststil
+p {
+  max-width: 90%;
+  text-align: left;
+  margin: 20px;
+  color: black; // ny tekstfarve
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 20px;
+  color: black; // ny tekstfarve
+}
+
+.box-image img {
+  max-width: 100%; // Sørger for, at billedet ikke overskrider boksens bredde
+  height: auto; // Bevarer billedets oprindelige højde-bredde-forhold
+  border-radius: 5px; // Matcher boksens afrunding
+  // Tilføj yderligere stilindstillinger efter behov
+}
+
+.grid-container {
+  @include partial.three-column-grid;
+  justify-content: center;
+  max-width: 100%;
+}   
+}
+
+  footer {
+    @include partial.three-column-grid;
     margin: 2em;
   
-    .logo-footer {
-      grid-column: span 1; // Tag 1 kolonneplads
-      grid-row: 1; // Læg logo i første række
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .contact {
-      grid-column: 1 / span 1; // Eller hvilken kolonne du ønsker .contact til at være i
+    .logo-footer, .contact, .services, .more {
       display: flex;
       flex-direction: column; // Stabler indholdet vertikalt
       align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
-      margin-left: 5em;
+  
+      // Specifik styling for .logo-footer
+      &.logo-footer {
+        grid-column: span 1; // Tag 1 kolonneplads
+        grid-row: 1; // Læg logo i første række
+        justify-content: flex-start;
+      }
+  
+      // Fælles styling for .contact, .services, .more med mulighed for justering per klasse
+      &.contact, &.services, &.more {
+        margin-left: 5em;
+        grid-column: span 1;
+      }
+      
+      // Individuelle kolonnejusteringer, hvis nødvendigt
+      &.contact { grid-column: 1 / span 1; }
+      &.services { grid-column: 2 / span 1; }
+      &.more { grid-column: 3 / span 1; }
     }
-
-
-    .services {
-      grid-column: 2 / span 1; // Eller hvilken kolonne du ønsker .contact til at være i
-      display: flex;
-      flex-direction: column; // Stabler indholdet vertikalt
-      align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
-      margin-left: 5em;
-    }
-
-    .more {
-      grid-column: 3 / span 1; // Eller hvilken kolonne du ønsker .contact til at være i
-      display: flex;
-      flex-direction: column; // Stabler indholdet vertikalt
-      align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
-      margin-left: 5em;
-    }   
-
+  
     .social a {
       margin: 0 10px;
     }
 }
 }
-
-
-
