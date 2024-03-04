@@ -1,0 +1,58 @@
+// Hej Ines, dette dokument er din helt egen scss til kontaktformularen
+// Det er linked i vores style.scss og importeres der, pga. "_"
+// Dette stylesheet bruger partials til at style basen, 
+// de er linked til med @ herunder
+// Sectionen har fået en class med navnet contact-form i HTML
+// Jeg har sat eksempler op til hvad du kan style nedenfor 
+// ($ er henvisning til de partials du finder i dokumentet _partial)
+
+@use 'partial';
+
+
+.contact-form {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+
+  form {
+    max-width: 100%;
+  
+    label {
+      display: block;
+      margin-bottom: 1px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+  
+      &:focus {
+        outline: none;
+        border-color: $blue;
+      }
+    }
+  
+    .special-cta {
+      background-color: $cta-color;
+      
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+  
+  @include respond-to("mobile") {
+    form {
+      // Tilpasning til mobil skræmstørrelser
+    }
+  }
+  
+  @include respond-to("desktop") {
+    form {
+      // Tilpasning til desktop skærmstørrelser
+    }
+  }
+}
