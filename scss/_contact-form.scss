@@ -5,13 +5,9 @@
 // Sectionen har fået en class med navnet contact-form i HTML
 // Jeg har sat eksempler op til hvad du kan style nedenfor 
 // ($ er henvisning til de partials du finder i dokumentet _partial)
-
-@use 'partial';
-
-
 .contact-form {
-    background-color: $bg-color;
-    color: $text-color;
+    background-color:aqua;
+    color: aqua;
     padding: $padding;
 
   form {
@@ -36,7 +32,7 @@
     }
   
     .special-cta {
-      background-color: $cta-color;
+      background-color:aqua;
       
       &:hover {
         background-color: $hover-color;

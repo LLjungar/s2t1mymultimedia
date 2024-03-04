@@ -1,9 +1,8 @@
-@use 'partial';
-@use 'cta';
 @use 'base';
+@use 'cta';
 @use 'contact-form';
 @use 'img-hover';
-
+@use 'partial';
 
 // Mobilvisning
 @include respond-to("mobile") {
@@ -109,8 +108,7 @@ main {
 .box-image img {
   max-width: 100%; // Sørger for, at billedet ikke overskrider boksens bredde
   height: auto; // Bevarer billedets oprindelige højde-bredde-forhold
-  border-radius: 5px; // Matcher boksens afrunding
-  // Tilføj yderligere stilindstillinger efter behov
+  border-radius: 1px; // Matcher boksens afrunding
 }
 
 .grid-container {
@@ -124,7 +122,6 @@ video {
   height: auto; /* Beholder det originale højde-bredde-forhold */
   grid-column: span 3; /* Videoen strækker sig over tre kolonner */
 }
-
 }
 
   footer {

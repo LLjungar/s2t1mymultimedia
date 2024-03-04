@@ -27,6 +27,8 @@ En log over ændringer foretaget i løbet af projektets udvikling. Omfatter dato
 
 - **[3/Linn]**: Desktop er mere eller mindre sat op. Kasserne er formgivet og stylet så de passer til tekst og billeder. Grid ligeså. Kæmper lidt med margin over alt og header i mobilversionen... Så der fortsætter jeg i morgen.  
 
+- **[4/Linn]**: Oprydning og rengøring - forsættes i morgen. Compileringen er ikke aktiv og vi kan ikke finde fejlen.  
+
 
 
 ## Fremtidige Forbedringer
@@ -53,6 +55,9 @@ Undervejs:
 - **[brugervenlighed]**: Ret alle H1'ere så alle siders overskrifter er i orden.  
 - **[styling]**: p, p, p, omg. Knapper og tekst centreres. De tager ikke imod margin. Har brug for alternativ til br. 
 - **[mobil-header]**: Der sidder en regel fast et sted der forhindrer sass compiler i at oprette den rigtige css. Start med at løse det. 
+- **[oprydning]**: Alle tekster skal erstattes af de rigtige. Rammer skal rettes til i grid. 
+- **[kort]**: Google Maps JavaScript API skal aktiveres for projekt før kortet kan køre på kontakt siden.
+
 
 ## Gruppe 1
 
