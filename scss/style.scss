@@ -1,3 +1,4 @@
+//Importerer vores SCSS moduler, herunder også partials og mixins
 @use 'base';
 @use 'cta';
 @use 'contact-form';
@@ -30,7 +31,7 @@ header {
   align-items: center;
   
   .logo-header {
-    grid-column: span 1; // Tag 1 kolonneplads
+    grid-column: span 1; 
     display: flex;
     justify-content: flex-start;
   }
@@ -41,17 +42,17 @@ header {
       align-items: center;
     
       ul {
-        list-style: none; // Fjerner punktopstilling fra listen
-        padding: 0; // Fjerner padding fra listen
-        display: flex; // Gør listen til en fleksibel container
+        list-style: none; 
+        padding: 0; 
+        display: flex; 
       
 
         .desktop-nav a {
-          transition: color 0.3s ease; // Glat farveskift ved hover
+          transition: color 0.3s ease; 
           a {
             text-decoration: none;
             &:hover {
-              color: partial.$red; // Ændrer farven ved hover
+              color: partial.$red;
             }
           }
         }
@@ -59,7 +60,7 @@ header {
     }
 
   .linkedin {
-    grid-column: span 1; // Tag 1 kolonneplads
+    grid-column: span 1; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -70,8 +71,8 @@ main {
 // Tilpasninger for hovedsektionen på desktop
 
 > * { // Dette vil målrette alle direkte børn af main
-  margin-top: 20px; // Tilføjer plads over elementet
-  margin-bottom: 20px; // Tilføjer plads under elementet
+  margin-top: 20px; // Tilføjer plads over elementet - virker ikke
+  margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
 }
 
 .box {
@@ -94,7 +95,7 @@ main {
   max-width: 90%;
   text-align: left;
   margin: 20px;
-  color: black; // ny tekstfarve
+  color: partial.$text-color-box; // note: problemer med p farve
 }
 
 .box h6 {
@@ -102,13 +103,13 @@ main {
   font-weight: bold;
   margin-bottom: 10px;
   margin: 20px;
-  color: black; // ny tekstfarve
+  color: partial.$text-color-box; // note: problemer med p farve
 }
 
 .box-image img {
-  max-width: 100%; // Sørger for, at billedet ikke overskrider boksens bredde
-  height: auto; // Bevarer billedets oprindelige højde-bredde-forhold
-  border-radius: 1px; // Matcher boksens afrunding
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 1px;
 }
 
 .grid-container {
@@ -118,9 +119,9 @@ main {
 }  
 
 video {
-  width: 100%; /* Videoen fylder hele bredden af dens container */
-  height: auto; /* Beholder det originale højde-bredde-forhold */
-  grid-column: span 3; /* Videoen strækker sig over tre kolonner */
+  width: 100%; 
+  height: auto; 
+  grid-column: span 3; //virker ikke
 }
 }
 
@@ -131,16 +132,16 @@ video {
     .logo-footer, .contact, .services, .more {
       display: flex;
       flex-direction: column; // Stabler indholdet vertikalt
-      align-items: flex-start; // Justerer indholdet til venstre (eller efter ønske)
+      align-items: flex-start; // Justerer indholdet til venstre
   
       // Specifik styling for .logo-footer
       &.logo-footer {
         grid-column: span 1; // Tag 1 kolonneplads
-        grid-row: 1; // Læg logo i første række
+        grid-row: 1; // Lægger logo i første række
         justify-content: flex-start;
       }
   
-      // Fælles styling for .contact, .services, .more med mulighed for justering per klasse
+      // Fælles styling for .contact, .services, .more 
       &.contact, &.services, &.more {
         margin-left: 5em;
         grid-column: span 1;

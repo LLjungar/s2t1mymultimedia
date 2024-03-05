@@ -1,6 +1,4 @@
 body {
-    // Mobilvenlige stilarter
-    font-family: partial.$font;
     background-color: partial.$bg-color;
     box-sizing: border-box;
     margin: 4 auto;
@@ -19,9 +17,9 @@ body {
   h1, h2, h3, h4 {
     font-weight: 400;
     color: partial.$text-color;
-    font-size: 20px; /* Ændret størrelse til 20 punkt */
-    margin-left: 150px; /* Tilføjet en venstre margin */
-    position: relative; /* Gør overskriften relativt positioneret */
+    font-size: 20px; 
+    margin-left: 150px;
+    position: relative; 
   }
   
   h5, h6 {
@@ -33,9 +31,9 @@ body {
   h1:before, h2:before, h3:before, h4:before {
     content: "";
     position: absolute;
-    width: 30px; /* Bredden af den vandrette linje */
-    height: 0.5px; /* Højden af den vandrette linje */
-    background-color: #fff; /* Farven på linjen */
+    width: 30px; 
+    height: 0.5px; 
+    background-color: #fff; 
     top: 50%; /* linjens vertikale position */
     left: -45px; /* Placerer linjen til venstre for teksten */
     transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
