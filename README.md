@@ -12,7 +12,7 @@ En oversigt over mapper og filer i projektet, og hvad de indeholder:
 
 ## Versionshistorik
 
-En log over ændringer foretaget i løbet af projektets udvikling. Omfatter datoer, beskrivelser af ændringer, og hvem der har lavet dem: 
+En log over ændringer foretaget i løbet af projektets udvikling. Omfatter datoer, beskrivelser af ændringer, og hvem der har udført dem på baggrund af hvad der er aftalt i plenum. Sådan kan vi for håbentligt let finde tilbage, hvis det bliver nødvendigt: 
 
 ### Februar 2024
 
