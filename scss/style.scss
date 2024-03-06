@@ -152,7 +152,7 @@ main {
   footer {
     @include partial.three-column-grid;
     margin: 2em;
-  
+    
     .logo-footer, .contact, .services, .more {
       display: flex;
       flex-direction: column; // Stabler indholdet vertikalt
