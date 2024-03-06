@@ -74,6 +74,7 @@ Mobil
 Det der vil færdiggøre siden, men går ud over vores evner: 
 - **[responsivitet]**: Her kommenterer vi på ...
 - **[kort]**: Google Maps JavaScript API skal aktiveres for projekt før kortet kan køre på kontakt siden.
+- **[SEO]**: Arbejde endnu mere med long-tail keywords i overskrifter. Indtil videre er (gennemarbejdet) SEO implementeret med meta-tags.
 
 ## Gruppe 1
 
