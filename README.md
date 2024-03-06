@@ -50,7 +50,7 @@ Index
 - Logoerne + trustpilot tilpasses til center
 
 Services
-- tredje billede skal spanne 2 col
+- Tredje billede skal spanne 2 col
 
 Team
 - Rød box centreres
@@ -61,10 +61,10 @@ Generelt
 - Margin mellem indhold 
 - Ret linkednin i footer
 
-Desktop
+Desktop 2
 - Navigationen rettes op
 
-Mobil
+Mobil 1
 - Navigation til burgermenu
 - Header
 - Footer
