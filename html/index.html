@@ -46,8 +46,8 @@
 <main>
     <section>
         <div class="grid-container">
-        <video width="1280" height="720" controls autoplay loop>
-            <source src="../media/bloom_media_mov.mp4" type="video/mp4" alt="Animation der visualiserer Bloom Medias logo der i sig selv består af 'blo' som røde øjne og næse, O som gul sol og m som blå måge. I animationen flyver mågen og solen">
+            <video id="logo-video" width="1280" height="720" controls autoplay loop>
+            <source src="../media/logo-animation.mp4" type="video/mp4" alt="Animation der visualiserer Bloom Medias logo der i sig selv består af 'blo' som røde øjne og næse, O som gul sol og m som blå måge. I animationen flyver mågen og solen">
             Din browser understøtter ikke video tagget.
         </video>
         </div>
@@ -75,7 +75,7 @@
 
     <section>
         <div class="grid-container">
-            <video width="1280" height="720" controls autoplay loop>
+            <video id="bloom-media-video" width="1280" height="720" controls autoplay loop muted>
                 <source src="../media/bloom_media_mov.mp4" type="video/mp4">
                 Din browser understøtter ikke video tagget.
             </video>
@@ -166,7 +166,7 @@
 </footer>
 
 <script src="../js/menu-toggle.js"></script>
- 
+<script src="../js/videoControl.js"></script>
 
 </body>
 </html>
