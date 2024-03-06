@@ -43,21 +43,37 @@ Overordnet:
 - **[Ines]**: Inhold til kontaktsiden, herunder først og frememst kontaktformular.
 - **[Emma]**: Sætter indoldet på siden Services op. Og muligvis grid til desktop version i samarbejde med Linn. 
 
-Undervejs:
-- **[style-række-49]**: Navigation hælder fortsat til venstre i midten af header. Er ellers centreret både vand- og lodret?
-- **[Mobilversion]**: Header og Footer oprettes i mobilversion. 
-- **[Mobilversion]**: Main styles til mobil. 
-- **[Desktop]**: Main styles til grid. 
-- **[CTA]**: Call to action styles og al navigation ses igennem. 
-- **[Billeder]**: Overvej om billeder skal skiftes til PNG? Det er som om alt er langsomt om at uploade. 
-- **[scss]**: Tjek scss igennem, er der noget der kan formindskes? 
-- **[brugervenlighed]**: Udfyld meningsfuld alt= på indhold. 
-- **[brugervenlighed]**: Ret alle H1'ere så alle siders overskrifter er i orden.  
-- **[styling]**: p, p, p, omg. Knapper og tekst centreres. De tager ikke imod margin. Har brug for alternativ til br. 
-- **[mobil-header]**: Der sidder en regel fast et sted der forhindrer sass compiler i at oprette den rigtige css. Start med at løse det. 
-- **[oprydning]**: Alle tekster skal erstattes af de rigtige. Rammer skal rettes til i grid. 
-- **[kort]**: Google Maps JavaScript API skal aktiveres for projekt før kortet kan køre på kontakt siden.
+# Undervejs
 
+Index
+- Videoer/erstat og tilpas
+- Logoerne + trustpilot tilpasses til center
+
+Services
+- tredje billede skal spanne 2 col
+
+Team
+- Rød box centreres
+
+Generelt
+- CTA i midten
+- Main p farve
+- Margin mellem indhold 
+- Ret linkednin i footer
+
+Desktop
+- Navigationen rettes op
+
+Mobil
+- Navigation til burgermenu
+- Header
+- Footer
+- Main
+
+
+Det der vil færdiggøre siden, men går ud over vores evner: 
+- **[responsivitet]**: Her kommenterer vi på ...
+- **[kort]**: Google Maps JavaScript API skal aktiveres for projekt før kortet kan køre på kontakt siden.
 
 ## Gruppe 1
 
