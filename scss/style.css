@@ -121,6 +121,49 @@ img {
   background-color: #000000;
 }
 
+.box {
+  width: 422px;
+  height: 429px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.box-yellow {
+  background-color: #FFD392;
+}
+
+.box-red {
+  background-color: #FFDBE5;
+}
+
+.box-blue {
+  background-color: #B0D0FF;
+}
+
+.box p {
+  max-width: 90%;
+  text-align: left;
+  margin: 20px;
+  color: #000000;
+}
+
+.box h6 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 20px;
+  color: #000000;
+}
+
+.box-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+
 .burger-menu {
   display: none;
   cursor: pointer;
@@ -229,42 +272,6 @@ img {
   main > * {
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  main .box {
-    width: 422px;
-    height: 429px;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
-  main .box-yellow {
-    background-color: #FFD392;
-  }
-  main .box-red {
-    background-color: #FFDBE5;
-  }
-  main .box-blue {
-    background-color: #B0D0FF;
-  }
-  main .box p {
-    max-width: 90%;
-    text-align: left;
-    margin: 20px;
-    color: #000000;
-  }
-  main .box h6 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin: 20px;
-    color: #000000;
-  }
-  main .box-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1px;
   }
   main .grid-container {
     display: grid;
