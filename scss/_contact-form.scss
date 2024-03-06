@@ -5,10 +5,12 @@
 // Sectionen har fået en class med navnet contact-form i HTML
 // Jeg har sat eksempler op til hvad du kan style nedenfor 
 // ($ er henvisning til de partials du finder i dokumentet _partial)
+
+@use 'partial';
 .contact-form {
     background-color:aqua;
     color: aqua;
-    padding: $padding;
+    padding: partial.$padding;
 
   form {
     max-width: 100%;
@@ -27,7 +29,7 @@
   
       &:focus {
         outline: none;
-        border-color: $blue;
+        border-color: partial.$blue;
       }
     }
   
@@ -35,11 +37,12 @@
       background-color:aqua;
       
       &:hover {
-        background-color: $hover-color;
+        background-color: partial.$hover-color;
       }
     }
   }
   
+  /*
   @include respond-to("mobile") {
     form {
       // Tilpasning til mobil skræmstørrelser
@@ -50,5 +53,5 @@
     form {
       // Tilpasning til desktop skærmstørrelser
     }
-  }
+  }*/
 }

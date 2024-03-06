@@ -1,13 +1,15 @@
 //Importerer vores SCSS moduler, herunder også partials og mixins
+@use 'partial';
 @use 'base';
 @use 'cta';
 @use 'contact-form';
 @use 'img-hover';
-@use 'partial';
+
 @use 'burgermenu';
 
 // Mobilvisning
-@include respond-to('mobile') {
+
+@include partial.respond-to('mobile') {
   
   header {
         @include partial.two-column-grid(4px, 4px); // vores mixin 
@@ -45,9 +47,8 @@
   }
 }
 
-
 // Desktopvisning
-@include respond-to('desktop') {
+@include partial.respond-to('desktop') {
 
 header {
   @include partial.three-column-grid(4px, 4px); // vores mixin 

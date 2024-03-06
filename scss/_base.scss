@@ -1,8 +1,11 @@
+@use 'partial';
+
 body {
     background-color: partial.$bg-color;
     box-sizing: border-box;
     margin: 4 auto;
     padding: 0;
+    font-family: partial.$font-family;
     }
   
   

@@ -1,15 +1,74 @@
 @charset "UTF-8";
 /*Variabler*/
 /*Mixins*/
+/*@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: 767px) { @content; } // Mobil enheder
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; } // Desktop og op til 1199px
+  } @else if $breakpoint == "large-desktop" {
+    @media (min-width: 1200px) { @content; } // Større end 1200px (store skærme)
+  }
+}*/
+body {
+  background-color: #000000;
+  box-sizing: border-box;
+  margin: 4 auto;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Stilarter for overskrifter */
+h1, h2, h3, h4 {
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 150px;
+  position: relative;
+}
+
+h5, h6 {
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+h1:before, h2:before, h3:before, h4:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 0.5px;
+  background-color: #fff;
+  top: 50%; /* linjens vertikale position */
+  left: -45px; /* Placerer linjen til venstre for teksten */
+  transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .cta {
-  display: inline-block; /* Gør elementet til en blok, men beholder den i linjen */
-  padding: 10px 38px; /* Tilføjer intern plads til knappen */
+  display: inline-block; /* Gør elementet til en blok, men bliver på linjen */
+  padding: 10px 38px; /* Tilføjer plads til knappen */
   background-color: #B0D0FF;
-  color: #000000; /* Tekstfarven på knappen */
-  text-decoration: none; /* Fjerner eventuelle understregninger */
+  color: #000000;
+  text-decoration: none;
   border-radius: 1px; /* Afrundede hjørner */
   border: 2px solid #B0D0FF;
-  transition: background-color 0.3s ease; /* Tilføjer en glat overgangseffekt */
+  transition: background-color 0.3s ease;
 }
 .cta:hover {
   background-color: #000;
@@ -17,81 +76,125 @@
   border: 2px solid #fff;
 }
 
-body {
-  font-family: "open sans";
-  background-color: #000000;
-  box-sizing: border-box;
-  margin: 4 auto;
-  padding: 0;
-  /* Stilarter for overskrifter */
+.contact-form {
+  background-color: aqua;
+  color: aqua;
+  padding: 0.5em;
+  /*
+  @include respond-to("mobile") {
+    form {
+      // Tilpasning til mobil skræmstørrelser
+    }
+  }
+
+  @include respond-to("desktop") {
+    form {
+      // Tilpasning til desktop skærmstørrelser
+    }
+  }*/
 }
-body p {
-  font-size: 20px;
-  color: #ffffff;
-  line-height: 1.5;
-}
-body h1, body h2, body h3, body h4 {
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px; /* Ændret størrelse til 20 punkt */
-  margin-left: 150px; /* Tilføjet en venstre margin */
-  position: relative; /* Gør overskriften relativt positioneret */
-}
-body h5, body h6 {
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-}
-body h1:before, body h2:before, body h3:before, body h4:before {
-  content: "";
-  position: absolute;
-  width: 30px; /* Bredden af den vandrette linje */
-  height: 0.5px; /* Højden af den vandrette linje */
-  background-color: #fff; /* Farven på linjen */
-  top: 50%; /* linjens vertikale position */
-  left: -45px; /* Placerer linjen til venstre for teksten */
-  transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
-}
-body a {
-  text-decoration: none;
-  color: #fff;
-}
-body img {
+.contact-form form {
   max-width: 100%;
-  height: auto;
+}
+.contact-form form label {
+  display: block;
+  margin-bottom: 1px;
+}
+.contact-form form input[type=text],
+.contact-form form input[type=email],
+.contact-form form input[type=tel],
+.contact-form form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form form input[type=text]:focus,
+.contact-form form input[type=email]:focus,
+.contact-form form input[type=tel]:focus,
+.contact-form form textarea:focus {
+  outline: none;
+  border-color: #B0D0FF;
+}
+.contact-form form .special-cta {
+  background-color: aqua;
+}
+.contact-form form .special-cta:hover {
+  background-color: #000000;
 }
 
-@media screen and (max-width: 768px) {
-  main .box {
-    width: 390px;
-    height: 390px;
-    background-color: #FFD392;
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column; /* Stabler indholdet vertikalt */
-    justify-content: center; /* Centrerer indholdet vertikalt */
-    text-align: left; /* Venstrevendt tekst */
-  }
-  main p {
-    color: black;
-    max-width: 90%; /* Sætter en maksimal bredde for teksten */
-    text-align: left; /* Centrerer teksten */
-    margin: 20px;
-  }
-  main h6 {
-    color: black;
-    font-size: 20px; /* Tilpas størrelsen efter behov */
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin: 20px;
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+.burger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #ffffff;
+}
+@media (max-width: 767px) {
+  .burger-menu {
+    display: block;
   }
 }
-@media screen and (min-width: 768px) {
+
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+.desktop-nav ul.is-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+}
+.desktop-nav ul.is-active li {
+  text-align: center;
+  padding: 15px 0;
+}
+@media (max-width: 767px) {
+  .desktop-nav ul.is-active {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px 4px;
+    margin: 20px;
+    align-items: center;
+  }
+  header .logo-header {
+    grid-column: span 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  header .desktop-nav {
+    grid-column: span 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header .desktop-nav li {
+    display: block;
+  }
+  header .linkedin {
+    display: none;
+  }
+}
+@media (min-width: calc(1199px + 1px)) and (max-width: calc(1200px - 1px)) {
   header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px 20px;
+    grid-gap: 4px 4px;
+    margin: 20px;
+    align-items: center;
   }
   header .logo-header {
     grid-column: span 1;
@@ -107,21 +210,25 @@ body img {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
   }
-  header .desktop-nav ul li {
-    margin-right: 20px;
+  header .desktop-nav ul .desktop-nav a {
+    transition: color 0.3s ease;
   }
-  header .desktop-nav ul li a {
+  header .desktop-nav ul .desktop-nav a a {
     text-decoration: none;
   }
-  header .desktop-nav ul li a:hover {
+  header .desktop-nav ul .desktop-nav a a:hover {
     color: #FFDBE5;
   }
   header .linkedin {
     grid-column: span 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+  }
+  main > * {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   main .box {
     width: 422px;
@@ -141,23 +248,23 @@ body img {
   main .box-blue {
     background-color: #B0D0FF;
   }
-  main p {
+  main .box p {
     max-width: 90%;
     text-align: left;
     margin: 20px;
-    color: black;
+    color: #000000;
   }
-  main h6 {
+  main .box h6 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     margin: 20px;
-    color: black;
+    color: #000000;
   }
   main .box-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 1px;
   }
   main .grid-container {
     display: grid;
@@ -165,6 +272,11 @@ body img {
     grid-gap: 4px 4px;
     justify-content: center;
     max-width: 100%;
+  }
+  main video {
+    width: 100%;
+    height: auto;
+    grid-column: span 3;
   }
   footer {
     display: grid;
