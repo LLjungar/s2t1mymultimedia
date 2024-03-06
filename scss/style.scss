@@ -4,12 +4,38 @@
 @use 'contact-form';
 @use 'img-hover';
 @use 'partial';
+@use 'burgermenu';
 
 // Mobilvisning
 @include respond-to("mobile") {
   
   header {
       // Tilpasninger for header på mobil
+      header {
+        @include partial.two-column-grid(4px, 4px); // vores mixin 
+        margin: 20px;
+        align-items: center;
+        
+        .logo-header {
+          grid-column: span 1; 
+          display: flex;
+          justify-content: flex-start;
+        }
+      
+        .desktop-nav {
+            grid-column: span 1;
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+              display: block;
+            }
+          }
+      
+        .linkedin {
+          display: none;
+        }  
+      }
   }
 
   main {

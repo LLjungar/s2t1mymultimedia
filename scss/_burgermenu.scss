@@ -1,0 +1,43 @@
+// Burgermenuen
+.burger-menu {
+    display: none; // Skjules som standard?
+    cursor: pointer;
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background-color: $nav-color;
+    }
+  
+    @include respond-to("mobile") {
+      display: block; // Vis kun på mobil
+    }
+  }
+  
+  // Skjul den fulde navigation på mobil, vis kun burgermenuen
+  .desktop-nav {
+    @include respond-to("mobile") {
+      display: none;
+    }
+  }
+  
+  // Aktiveret tilstand for navigation på mobil
+  .desktop-nav ul.is-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%; // headerens højde (vend tilbage)
+    left: 0;
+    width: 100%;
+    background-color: $bg-color;
+    li {
+      text-align: center;
+      padding: 15px 0;
+    }
+  
+    @include respond-to("mobile") {
+      display: none; // Starter med at være skjult, indtil burgermenuen aktiveres (måske)
+    }
+  }
+  
