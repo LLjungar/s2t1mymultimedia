@@ -7,11 +7,9 @@
 @use 'burgermenu';
 
 // Mobilvisning
-@include respond-to("mobile") {
+@include respond-to('mobile') {
   
   header {
-      // Tilpasninger for header på mobil
-      header {
         @include partial.two-column-grid(4px, 4px); // vores mixin 
         margin: 20px;
         align-items: center;
@@ -36,7 +34,7 @@
           display: none;
         }  
       }
-  }
+  
 
   main {
     // Tilpasninger for hovedsektionen på desktop
@@ -49,7 +47,7 @@
 
 
 // Desktopvisning
-@include respond-to("desktop") {
+@include respond-to('desktop') {
 
 header {
   @include partial.three-column-grid(4px, 4px); // vores mixin 
@@ -94,62 +92,62 @@ header {
 }
 
 main {
-// Tilpasninger for hovedsektionen på desktop
-
-> * { // Dette vil målrette alle direkte børn af main
-  margin-top: 20px; // Tilføjer plads over elementet - virker ikke
-  margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
-}
-
-.box {
-  width: 422px;
-  height: 429px;
-  border-radius: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-// Farvevariationer
-.box-yellow { background-color: partial.$yellow; }
-.box-red { background-color: partial.$red; }
-.box-blue { background-color: partial.$blue; }
-
-// Tekststil
-.box p {
-  max-width: 90%;
-  text-align: left;
-  margin: 20px;
-  color: partial.$text-color-box; // note: problemer med p farve
-}
-
-.box h6 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin: 20px;
-  color: partial.$text-color-box; // note: problemer med p farve
-}
-
-.box-image img {
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 1px;
-}
-
-.grid-container {
-  @include partial.three-column-grid;
-  justify-content: center;
-  max-width: 100%;
-}  
-
-video {
-  width: 100%; 
-  height: auto; 
-  grid-column: span 3; //virker ikke
-}
-}
+  // Tilpasninger for hovedsektionen på desktop
+  
+  > * { // Dette vil målrette alle direkte børn af main
+    margin-top: 20px; // Tilføjer plads over elementet - virker ikke
+    margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
+  }
+  
+  .box {
+    width: 422px;
+    height: 429px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  // Farvevariationer
+  .box-yellow { background-color: partial.$yellow; }
+  .box-red { background-color: partial.$red; }
+  .box-blue { background-color: partial.$blue; }
+  
+  // Tekststil
+  .box p {
+    max-width: 90%;
+    text-align: left;
+    margin: 20px;
+    color: partial.$text-color-box; // note: problemer med p farve
+  }
+  
+  .box h6 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin: 20px;
+    color: partial.$text-color-box; // note: problemer med p farve
+  }
+  
+  .box-image img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 1px;
+  }
+  
+  .grid-container {
+    @include partial.three-column-grid;
+    justify-content: center;
+    max-width: 100%;
+  }  
+  
+  video {
+    width: 100%; 
+    height: auto; 
+    grid-column: span 3; //virker ikke
+  }
+  }
 
   footer {
     @include partial.three-column-grid;
