@@ -260,6 +260,9 @@ img {
     font-size: x-large;
     cursor: pointer;
   }
+  footer h5 {
+    font-weight: bolder;
+  }
 }
 @media (min-width: 800px) and (max-width: 1281px) {
   header {
