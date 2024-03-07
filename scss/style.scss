@@ -83,15 +83,16 @@
   main {
     // Tilpasninger for hovedsektionen på desktop
 
-    .box{
+    .box, .trust{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin: 4px;
     }
 
+
       
-      /* Stilarter for overskrifter */
+      /* Stilarter for overskrifter */ 
   h1, h2, h3, h4 {
     font-weight: 400;
     color: partial.$text-color;
@@ -204,8 +205,7 @@
   }  
 }
 
-
-main {
+  main {
   // Tilpasninger for hovedsektionen på desktop
   
   > * { // Dette vil målrette alle direkte børn af main
@@ -218,6 +218,11 @@ main {
     justify-content: center;
     max-width: 100%;
   }  
+
+  .test {
+    display: flex;
+    flex-direction: row;
+  }
 
   video {
     width: 100%; 
@@ -258,7 +263,7 @@ main {
       margin: 0 10px;
     }
 }}
-
+  
 
 
 // Large-desktopvisning
@@ -302,7 +307,7 @@ main {
     justify-content: flex-end;
     align-items: center;
   }  
-}
+  }
 
 
 main {
@@ -318,6 +323,11 @@ main {
     justify-content: center;
     max-width: 100%;
   }  
+
+  .test {
+    display: flex;
+    flex-direction: row;
+  }
   
   video {
     width: 100%; 

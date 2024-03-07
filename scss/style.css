@@ -6,7 +6,8 @@ body {
   box-sizing: border-box;
   margin: 4 auto;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 p {
@@ -16,7 +17,10 @@ p {
 }
 
 /* Stilarter for overskrifter */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 400;
   color: #ffffff;
   font-size: 20px;
@@ -24,13 +28,17 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-h5, h6 {
+h5,
+h6 {
   font-weight: 400;
   color: #ffffff;
   font-size: 20px;
 }
 
-h1:before, h2:before, h3:before, h4:before {
+h1:before,
+h2:before,
+h3:before,
+h4:before {
   content: "";
   position: absolute;
   width: 30px;
@@ -38,7 +46,9 @@ h1:before, h2:before, h3:before, h4:before {
   background-color: #fff;
   top: 50%; /* linjens vertikale position */
   left: -45px; /* Placerer linjen til venstre for teksten */
-  transform: translateY(50%); /* Justerer linjens position så den er på midten af teksten vertikalt */
+  transform: translateY(
+    50%
+  ); /* Justerer linjens position så den er på midten af teksten vertikalt */
 }
 
 a {
@@ -54,11 +64,11 @@ img {
 .cta {
   display: inline-block; /* Gør elementet til en blok, men bliver på linjen */
   padding: 10px 38px; /* Tilføjer plads til knappen */
-  background-color: #B0D0FF;
+  background-color: #b0d0ff;
   color: #000000;
   text-decoration: none;
   border-radius: 1px; /* Afrundede hjørner */
-  border: 2px solid #B0D0FF;
+  border: 2px solid #b0d0ff;
   transition: background-color 0.3s ease;
   /* Centreringsregler */
   position: relative;
@@ -95,19 +105,19 @@ img {
   display: block;
   margin-bottom: 1px;
 }
-.contact-form form input[type=text],
-.contact-form form input[type=email],
-.contact-form form input[type=tel],
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form input[type="tel"],
 .contact-form form textarea {
   width: 100%;
   box-sizing: border-box;
 }
-.contact-form form input[type=text]:focus,
-.contact-form form input[type=email]:focus,
-.contact-form form input[type=tel]:focus,
+.contact-form form input[type="text"]:focus,
+.contact-form form input[type="email"]:focus,
+.contact-form form input[type="tel"]:focus,
 .contact-form form textarea:focus {
   outline: none;
-  border-color: #B0D0FF;
+  border-color: #b0d0ff;
 }
 .contact-form form .special-cta {
   background-color: aqua;
@@ -127,15 +137,15 @@ img {
 }
 
 .box-yellow {
-  background-color: #FFD392;
+  background-color: #ffd392;
 }
 
 .box-red {
-  background-color: #FFDBE5;
+  background-color: #ffdbe5;
 }
 
 .box-blue {
-  background-color: #B0D0FF;
+  background-color: #b0d0ff;
 }
 
 .box p {
@@ -244,7 +254,7 @@ main video {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    background-color: #FFDBE5;
+    background-color: #ffdbe5;
     top: 75px;
     left: 0;
     padding: 0;
@@ -281,13 +291,17 @@ main video {
   main {
     /* Stilarter for overskrifter */
   }
-  main .box {
+  main .box,
+  main .trust {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin: 4px;
   }
-  main h1, main h2, main h3, main h4 {
+  main h1,
+  main h2,
+  main h3,
+  main h4 {
     font-weight: 400;
     color: #ffffff;
     font-size: 20px;
@@ -356,7 +370,7 @@ main video {
     text-decoration: none;
   }
   header .desktop-nav ul .desktop-nav a a:hover {
-    color: #FFDBE5;
+    color: #ffdbe5;
   }
   header .linkedin {
     grid-column: span 1;
@@ -375,6 +389,10 @@ main video {
     justify-content: center;
     max-width: 100%;
   }
+  main .test {
+    display: flex;
+    flex-direction: row;
+  }
   main video {
     width: 100%;
     height: auto;
@@ -386,28 +404,54 @@ main video {
     grid-gap: 4px 4px;
     margin: 2em;
   }
-  footer .logo-footer, footer .contact, footer .services, footer .more {
+  footer .logo-footer,
+  footer .contact,
+  footer .services,
+  footer .more {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  footer .logo-footer.logo-footer, footer .contact.logo-footer, footer .services.logo-footer, footer .more.logo-footer {
+  footer .logo-footer.logo-footer,
+  footer .contact.logo-footer,
+  footer .services.logo-footer,
+  footer .more.logo-footer {
     grid-column: span 1;
     grid-row: 1;
     justify-content: flex-start;
   }
-  footer .logo-footer.contact, footer .logo-footer.services, footer .logo-footer.more, footer .contact.contact, footer .contact.services, footer .contact.more, footer .services.contact, footer .services.services, footer .services.more, footer .more.contact, footer .more.services, footer .more.more {
+  footer .logo-footer.contact,
+  footer .logo-footer.services,
+  footer .logo-footer.more,
+  footer .contact.contact,
+  footer .contact.services,
+  footer .contact.more,
+  footer .services.contact,
+  footer .services.services,
+  footer .services.more,
+  footer .more.contact,
+  footer .more.services,
+  footer .more.more {
     margin-left: 5em;
     grid-column: span 1;
   }
-  footer .logo-footer.contact, footer .contact.contact, footer .services.contact, footer .more.contact {
-    grid-column: 1/span 1;
+  footer .logo-footer.contact,
+  footer .contact.contact,
+  footer .services.contact,
+  footer .more.contact {
+    grid-column: 1 / span 1;
   }
-  footer .logo-footer.services, footer .contact.services, footer .services.services, footer .more.services {
-    grid-column: 2/span 1;
+  footer .logo-footer.services,
+  footer .contact.services,
+  footer .services.services,
+  footer .more.services {
+    grid-column: 2 / span 1;
   }
-  footer .logo-footer.more, footer .contact.more, footer .services.more, footer .more.more {
-    grid-column: 3/span 1;
+  footer .logo-footer.more,
+  footer .contact.more,
+  footer .services.more,
+  footer .more.more {
+    grid-column: 3 / span 1;
   }
   footer .social a {
     margin: 0 10px;
@@ -441,7 +485,7 @@ main video {
     text-decoration: none;
   }
   header .desktop-nav ul .desktop-nav a a:hover {
-    color: #FFDBE5;
+    color: #ffdbe5;
   }
   header .linkedin {
     grid-column: span 1;
@@ -460,6 +504,10 @@ main video {
     justify-content: center;
     max-width: 100%;
   }
+  main .test {
+    display: flex;
+    flex-direction: row;
+  }
   main video {
     width: 100%;
     height: auto;
@@ -471,30 +519,56 @@ main video {
     grid-gap: 4px 4px;
     margin: 2em;
   }
-  footer .logo-footer, footer .contact, footer .services, footer .more {
+  footer .logo-footer,
+  footer .contact,
+  footer .services,
+  footer .more {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  footer .logo-footer.logo-footer, footer .contact.logo-footer, footer .services.logo-footer, footer .more.logo-footer {
+  footer .logo-footer.logo-footer,
+  footer .contact.logo-footer,
+  footer .services.logo-footer,
+  footer .more.logo-footer {
     grid-column: span 1;
     grid-row: 1;
     justify-content: flex-start;
   }
-  footer .logo-footer.contact, footer .logo-footer.services, footer .logo-footer.more, footer .contact.contact, footer .contact.services, footer .contact.more, footer .services.contact, footer .services.services, footer .services.more, footer .more.contact, footer .more.services, footer .more.more {
+  footer .logo-footer.contact,
+  footer .logo-footer.services,
+  footer .logo-footer.more,
+  footer .contact.contact,
+  footer .contact.services,
+  footer .contact.more,
+  footer .services.contact,
+  footer .services.services,
+  footer .services.more,
+  footer .more.contact,
+  footer .more.services,
+  footer .more.more {
     margin-left: 5em;
     grid-column: span 1;
   }
-  footer .logo-footer.contact, footer .contact.contact, footer .services.contact, footer .more.contact {
-    grid-column: 1/span 1;
+  footer .logo-footer.contact,
+  footer .contact.contact,
+  footer .services.contact,
+  footer .more.contact {
+    grid-column: 1 / span 1;
   }
-  footer .logo-footer.services, footer .contact.services, footer .services.services, footer .more.services {
-    grid-column: 2/span 1;
+  footer .logo-footer.services,
+  footer .contact.services,
+  footer .services.services,
+  footer .more.services {
+    grid-column: 2 / span 1;
   }
-  footer .logo-footer.more, footer .contact.more, footer .services.more, footer .more.more {
-    grid-column: 3/span 1;
+  footer .logo-footer.more,
+  footer .contact.more,
+  footer .services.more,
+  footer .more.more {
+    grid-column: 3 / span 1;
   }
   footer .social a {
     margin: 0 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

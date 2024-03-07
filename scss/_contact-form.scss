@@ -1,57 +1,48 @@
-// Hej Ines, dette dokument er din helt egen scss til kontaktformularen
-// Det er linked i vores style.scss og importeres der, pga. "_"
-// Dette stylesheet bruger partials til at style basen, 
-// de er linked til med @ herunder
-// Sectionen har fået en class med navnet contact-form i HTML
-// Jeg har sat eksempler op til hvad du kan style nedenfor 
-// ($ er henvisning til de partials du finder i dokumentet _partial)
-
 @use 'partial';
-.contact-form {
-    background-color:aqua;
-    color: aqua;
-    padding: partial.$padding;
 
+.contact-form {
   form {
-    max-width: 100%;
-  
+    width: calc(100% + 8px); // Fylder siden ud + 4px margin på hver side
+    margin-left: -4px;
+    margin-right: -4px;
+
     label {
-      display: block;
-      margin-bottom: 1px;
+      display: inline-block;
+      width: 100%;
+      background-color: $labelColor;
+      margin-bottom: 4px; // Giver en lille afstand mellem elementerne
+
+      &:not(#kommentar-label) {
+        height: 20px; // Standardhøjde for labels
+      }
+
+      // Specifik stil for "kommentar" label
+      &#kommentar-label {
+        height: 40px; // Dobbelt så høj som de andre labels
+      }
     }
-  
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
     textarea {
-      width: 100%;
+      width: 100%; // Fylder bredden af formen
+      box-sizing: border-box; // Sørger for, at padding og border ikke tilføjer ekstra bredde
+    }
+
+    textarea {
+      align-self: start; // Dette sikrer, at textarea starter i øverste venstre hjørne
+    }
+
+    button.special-cta {
+      background-color: $blue; // Bruger variabel for blå farve
+      color: #ffffff; // Hvid tekstfarve for bedre læsbarhed
+      border: none; // Fjerner standard border
+      padding: 10px 20px; // Lidt padding for bedre udseende
+      cursor: pointer; // Cursor ændres til pointer for bedre brugeroplevelse
+      display: block; // Gør knappen til en block-level element
+      width: 100%; // Fylder bredden
       box-sizing: border-box;
-  
-      &:focus {
-        outline: none;
-        border-color: partial.$blue;
-      }
-    }
-  
-    .special-cta {
-      background-color:aqua;
-      
-      &:hover {
-        background-color: partial.$hover-color;
-      }
     }
   }
-  
-  /*
-  @include respond-to("mobile") {
-    form {
-      // Tilpasning til mobil skræmstørrelser
-    }
-  }
-  
-  @include respond-to("desktop") {
-    form {
-      // Tilpasning til desktop skærmstørrelser
-    }
-  }*/
 }
