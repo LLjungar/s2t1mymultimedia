@@ -1,192 +1,179 @@
 //Importerer vores SCSS moduler, herunder også partials og mixins
-@use 'partial';
-@use 'base';
-@use 'cta';
-@use 'contact-form';
-@use 'img-hover';
-@use 'main';
-@use 'burgermenu';
-
+@use "partial";
+@use "base";
+@use "cta";
+@use "contact-form";
+@use "img-hover";
+@use "main";
+@use "burgermenu";
 
 // Mobilvisning
-@include partial.respond-to('mobile') {
-  
+@include partial.respond-to("mobile") {
   header {
-        @include partial.two-column-grid(4px, 4px); // vores mixin 
-        margin: 20px;
-        align-items: center;
-        
-        .logo-header {
-          grid-column: span 1; 
-          display: flex;
-          justify-content: flex-start;
-        }
-      
-       .linkedin {
-          display: none;
-        }  
+    @include partial.two-column-grid(4px, 4px); // vores mixin
+    margin: 20px;
+    align-items: center;
 
-        .desktop-nav {
-          display: flex;
-          align-items: center;
-        }
-      
-        .menu-container {
-          grid-column: span 1;
-          justify-self: end;
-        }
-      
-        .menu-list {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-          position: absolute;
-          background-color: partial.$red;
-          top: 75px;
-          left: 0;
-          padding: 0;
-          box-sizing: border-box;
-          text-decoration: none;
-          z-index: 2;
-        }
-      
-        .menu-list.show-mobile {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 50vh;
-          margin: 0;
-          padding: 20px;
-        }
-      
-        .menu-list li {
-          margin-top: 40px;
-          margin-bottom: 10px;
-          margin-right: 0;
-          text-align: center;
-          list-style: none;
-      
-        a {
-          color:partial.$text-color-box;
-        }
+    .logo-header {
+      grid-column: span 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .linkedin {
+      display: none;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-container {
+      grid-column: span 1;
+      justify-self: end;
+    }
+
+    .menu-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: partial.$red;
+      top: 75px;
+      left: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      z-index: 2;
+    }
+
+    .menu-list.show-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .menu-list li {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      margin-right: 0;
+      text-align: center;
+      list-style: none;
+
+      a {
+        color: partial.$text-color-box;
       }
-        .mobile-menu-icon {
-          display: block;
-          color: white;
-          font-size: x-large;
-          cursor: pointer;
-        }
-      }
+    }
+    .mobile-menu-icon {
+      display: block;
+      color: white;
+      font-size: x-large;
+      cursor: pointer;
+    }
+  }
 
   main {
     // Tilpasninger for hovedsektionen på desktop
 
-    .box, .trust{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 4px;
+    .box,
+    .trust {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 4px;
     }
 
-
-      
-      /* Stilarter for overskrifter */ 
-  h1, h2, h3, h4 {
-    font-weight: 400;
-    color: partial.$text-color;
-    font-size: 20px; 
-    margin-left: 72px;
-    position: relative; 
-  }
-
+    /* Stilarter for overskrifter */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: 400;
+      color: partial.$text-color;
+      font-size: 20px;
+      margin-left: 72px;
+      position: relative;
+    }
   }
 
   footer {
-      // Tilpasninger for footer på mobil
-      h5{
-        font-weight: bolder;
-      }
-
+    // Tilpasninger for footer på mobil
+    h5 {
+      font-weight: bolder;
+    }
   }
 }
 
-
-
 // Tabletvisning
-@include partial.respond-to('tablet') {
-  
+@include partial.respond-to("tablet") {
   header {
-        @include partial.two-column-grid(4px, 4px); // vores mixin 
-        margin: 20px;
-        align-items: center;
-        
-        .logo-header {
-          grid-column: span 1; 
-          display: flex;
-          justify-content: flex-start;
-        }
-      
-        .desktop-nav {
-            grid-column: span 1;
-            display: flex;
-            justify-content: flex-end;
+    @include partial.two-column-grid(4px, 4px); // vores mixin
+    margin: 20px;
+    align-items: center;
 
-            li {
-              display: block;
-            }
-          }
-      
-        .linkedin {
-          display: none;
-        }  
+    .logo-header {
+      grid-column: span 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .desktop-nav {
+      grid-column: span 1;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        display: block;
       }
-  
+    }
+
+    .linkedin {
+      display: none;
+    }
+  }
 
   main {
     // Tilpasninger for hovedsektionen på desktop
 
     video {
-      width: 100%; 
-      height: auto; 
+      width: 100%;
+      height: auto;
       max-width: 100%;
     }
   }
 
   footer {
-      // Tilpasninger for footer på mobil
+    // Tilpasninger for footer på mobil
   }
 }
-
-
-
 
 // Desktopvisning
-  @include partial.respond-to('desktop') {
-
+@include partial.respond-to("desktop") {
   header {
-    @include partial.three-column-grid(4px, 4px); // vores mixin 
-  
-    .logo-header {
-    grid-column: span 1; 
-    display: flex;
-    justify-content: flex-start;
-  }
+    @include partial.three-column-grid(4px, 4px); // vores mixin
 
-  .desktop-nav {
+    .logo-header {
       grid-column: span 1;
       display: flex;
-      align-items: center;
-    
-      ul {
-        list-style: none; 
-        padding: 0; 
-        display: flex; 
-      
+      justify-content: flex-start;
+    }
 
+    .desktop-nav {
+      grid-column: span 1;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
         .desktop-nav a {
-          transition: color 0.3s ease; 
+          transition: color 0.3s ease;
           a {
             text-decoration: none;
             &:hover {
@@ -197,100 +184,109 @@
       }
     }
 
-  .linkedin {
-    grid-column: span 1; 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }  
-}
+    .linkedin {
+      grid-column: span 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
 
   main {
-  // Tilpasninger for hovedsektionen på desktop
-  
-  > * { // Dette vil målrette alle direkte børn af main
-    margin-top: 20px; // Tilføjer plads over elementet - virker ikke
-    margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
-  }
-  
-  .grid-container {
-    @include partial.three-column-grid;
-    justify-content: center;
-    max-width: 100%;
-  }  
+    // Tilpasninger for hovedsektionen på desktop
 
-  .test {
-    display: flex;
-    flex-direction: row;
-  }
+    > * {
+      // Dette vil målrette alle direkte børn af main
+      margin-top: 20px; // Tilføjer plads over elementet - virker ikke
+      margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
+    }
 
-  video {
-    width: 100%; 
-    height: auto; 
-    max-width: 100%;
-  }
+    .grid-container {
+      @include partial.three-column-grid;
+      justify-content: center;
+      max-width: 100%;
+    }
+
+    .test {
+      display: flex;
+      flex-direction: row;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
   }
 
   footer {
     @include partial.three-column-grid;
     margin: 2em;
-    
-    .logo-footer, .contact, .services, .more {
+
+    .logo-footer,
+    .contact,
+    .services,
+    .more {
       display: flex;
       flex-direction: column; // Stabler indholdet vertikalt
       align-items: flex-start; // Justerer indholdet til venstre
-  
+
       // Specifik styling for .logo-footer
       &.logo-footer {
         grid-column: span 1; // Tag 1 kolonneplads
         grid-row: 1; // Lægger logo i første række
         justify-content: flex-start;
       }
-  
-      // Fælles styling for .contact, .services, .more 
-      &.contact, &.services, &.more {
+
+      // Fælles styling for .contact, .services, .more
+      &.contact,
+      &.services,
+      &.more {
         margin-left: 5em;
         grid-column: span 1;
       }
-      
+
       // Individuelle kolonnejusteringer, hvis nødvendigt
-      &.contact { grid-column: 1 / span 1; }
-      &.services { grid-column: 2 / span 1; }
-      &.more { grid-column: 3 / span 1; }
+      &.contact {
+        grid-column: 1 / span 1;
+      }
+      &.services {
+        grid-column: 2 / span 1;
+      }
+      &.more {
+        grid-column: 3 / span 1;
+      }
     }
-  
+
     .social a {
       margin: 0 10px;
     }
-}}
-  
-
+  }
+}
 
 // Large-desktopvisning
-@include partial.respond-to('large-desktop') {
-
+@include partial.respond-to("large-desktop") {
   header {
-    @include partial.three-column-grid(4px, 4px); // vores mixin 
-  
-    .logo-header {
-    grid-column: span 1; 
-    display: flex;
-    justify-content: flex-start;
-  }
+    @include partial.three-column-grid(4px, 4px); // vores mixin
 
-  .desktop-nav {
+    .logo-header {
+      grid-column: span 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .desktop-nav {
       grid-column: span 1;
       display: flex;
       align-items: center;
-    
+
       ul {
-        list-style: none; 
-        padding: 0; 
-        display: flex; 
-      
+        list-style: none;
+        padding: 0;
+        display: flex;
 
         .desktop-nav a {
-          transition: color 0.3s ease; 
+          transition: color 0.3s ease;
           a {
             text-decoration: none;
             &:hover {
@@ -301,70 +297,82 @@
       }
     }
 
-  .linkedin {
-    grid-column: span 1; 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }  
+    .linkedin {
+      grid-column: span 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 
+  main {
+    // Tilpasninger for hovedsektionen på desktop
 
-main {
-  // Tilpasninger for hovedsektionen på desktop
-  
-  > * { // Dette vil målrette alle direkte børn af main
-    margin-top: 20px; // Tilføjer plads over elementet - virker ikke
-    margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
-  }
-  
-  .grid-container {
-    @include partial.three-column-grid;
-    justify-content: center;
-    max-width: 100%;
-  }  
+    > * {
+      // Dette vil målrette alle direkte børn af main
+      margin-top: 20px; // Tilføjer plads over elementet - virker ikke
+      margin-bottom: 20px; // Tilføjer plads under elementet - virker ikke
+    }
 
-  .test {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  video {
-    width: 100%; 
-    height: auto; 
-    max-width: 100%;
-  }
+    .grid-container {
+      @include partial.three-column-grid;
+      justify-content: center;
+      max-width: 100%;
+    }
+
+    .test {
+      display: flex;
+      flex-direction: row;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
   }
 
   footer {
     @include partial.three-column-grid;
     margin: 2em;
-    
-    .logo-footer, .contact, .services, .more {
+
+    .logo-footer,
+    .contact,
+    .services,
+    .more {
       display: flex;
       flex-direction: column; // Stabler indholdet vertikalt
       align-items: flex-start; // Justerer indholdet til venstre
-  
+
       // Specifik styling for .logo-footer
       &.logo-footer {
         grid-column: span 1; // Tag 1 kolonneplads
         grid-row: 1; // Lægger logo i første række
         justify-content: flex-start;
       }
-  
-      // Fælles styling for .contact, .services, .more 
-      &.contact, &.services, &.more {
+
+      // Fælles styling for .contact, .services, .more
+      &.contact,
+      &.services,
+      &.more {
         margin-left: 5em;
         grid-column: span 1;
       }
-      
+
       // Individuelle kolonnejusteringer, hvis nødvendigt
-      &.contact { grid-column: 1 / span 1; }
-      &.services { grid-column: 2 / span 1; }
-      &.more { grid-column: 3 / span 1; }
+      &.contact {
+        grid-column: 1 / span 1;
+      }
+      &.services {
+        grid-column: 2 / span 1;
+      }
+      &.more {
+        grid-column: 3 / span 1;
+      }
     }
-  
+
     .social a {
       margin: 0 10px;
     }
-}}
+  }
+}
