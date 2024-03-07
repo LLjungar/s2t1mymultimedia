@@ -60,6 +60,10 @@ img {
   border-radius: 1px; /* Afrundede hjørner */
   border: 2px solid #B0D0FF;
   transition: background-color 0.3s ease;
+  /* Centreringsregler */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .cta:hover {
   background-color: #000;
@@ -153,6 +157,20 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 1px;
+}
+
+main section {
+  margin-top: 63px;
+  margin-bottom: 32px;
+}
+main .p-main {
+  /* Centreringsregler */
+  text-align: center;
+}
+main video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .burger-menu {
@@ -260,6 +278,22 @@ img {
     font-size: x-large;
     cursor: pointer;
   }
+  main {
+    /* Stilarter for overskrifter */
+  }
+  main .box {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 4px;
+  }
+  main h1, main h2, main h3, main h4 {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 72px;
+    position: relative;
+  }
   footer h5 {
     font-weight: bolder;
   }
@@ -287,6 +321,11 @@ img {
   }
   header .linkedin {
     display: none;
+  }
+  main video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 }
 @media (min-width: 1281px) and (max-width: 1920px) {
@@ -339,7 +378,7 @@ img {
   main video {
     width: 100%;
     height: auto;
-    grid-column: span 3;
+    max-width: 100%;
   }
   footer {
     display: grid;
@@ -424,7 +463,7 @@ img {
   main video {
     width: 100%;
     height: auto;
-    grid-column: span 3;
+    max-width: 100%;
   }
   footer {
     display: grid;

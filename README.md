@@ -46,7 +46,7 @@ Overordnet:
 # Undervejs
 
 Index
-- Videoer/erstat og tilpas
+- Videoer tilpas
 - Logoerne + trustpilot tilpasses til center
 
 Services
@@ -56,18 +56,15 @@ Team
 - Rød box centreres
 
 Generelt
-- CTA i midten
-- Main p farve
-- Margin mellem indhold 
 - Ret linkednin i footer
+
+Kontakt
+- Formular styling 
 
 Desktop 2
 - Navigationen rettes op
 
 Mobil 1
-- Navigation til burgermenu
-- Header
-- Footer
 - Main
 
 

@@ -82,6 +82,24 @@
 
   main {
     // Tilpasninger for hovedsektionen på desktop
+
+    .box{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 4px;
+    }
+
+      
+      /* Stilarter for overskrifter */
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    color: partial.$text-color;
+    font-size: 20px; 
+    margin-left: 72px;
+    position: relative; 
+  }
+
   }
 
   footer {
@@ -127,6 +145,12 @@
 
   main {
     // Tilpasninger for hovedsektionen på desktop
+
+    video {
+      width: 100%; 
+      height: auto; 
+      max-width: 100%;
+    }
   }
 
   footer {
@@ -194,11 +218,11 @@ main {
     justify-content: center;
     max-width: 100%;
   }  
-  
+
   video {
     width: 100%; 
     height: auto; 
-    grid-column: span 3; //virker ikke
+    max-width: 100%;
   }
   }
 
@@ -298,7 +322,7 @@ main {
   video {
     width: 100%; 
     height: auto; 
-    grid-column: span 3; //virker ikke
+    max-width: 100%;
   }
   }
 

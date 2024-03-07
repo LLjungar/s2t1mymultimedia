@@ -9,7 +9,6 @@
     text-decoration: none; 
     border-radius: 1px; /* Afrundede hjørner */
     border: 2px solid partial.$cta-color; 
-  
     transition: background-color 0.3s ease; 
   
     &:hover {
@@ -17,5 +16,10 @@
       color: #fff; // Tekstfarven ændres til hvid
       border: 2px solid #fff; 
   }
-  }
+
+    /* Centreringsregler */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
   
