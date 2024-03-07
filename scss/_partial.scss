@@ -22,26 +22,27 @@ $padding: 0.5em;
 
 // Definering af breakpoints som et map
 $breakpoints: (
-  mobile: 767px,
-  tablet: 768px,
-  desktop: 1199px,
-  large-desktop: 1200px
+  mobile: 800px,
+  tablet: 801px,
+  desktop: 1281px,
+  large-desktop: 1920px
 );
 
 // Opdateret mixin til at bruge værdier fra $breakpoints map
 @mixin respond-to($breakpoint) {
   
   @if $breakpoint == "mobile" {
-    @media (max-width: map-get($breakpoints, mobile)) { @content; } // Mobil enheder
+    @media (max-width: map-get($breakpoints, mobile)) { @content; } //Mobil enheder
   } 
   
   @else if $breakpoint == "tablet" {
     // Antager tablet som en mellemkategori
-    @media (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop)) { @content; } // Tablet enheder
+    @media (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) { @content; } // Tablet enheder
   } 
   
   @else if $breakpoint == "desktop" {
-    @media (min-width: calc(#{map-get($breakpoints, desktop)} + 1px)) and (max-width: calc(#{map-get($breakpoints, large-desktop)} - 1px)) { @content; } // Desktop
+    @media (min-width: map-get($breakpoints, desktop)) and (max-width: map-get($breakpoints, large-desktop)) { @content; }
+    //@media (min-width: calc(#{map-get($breakpoints, desktop)} + 1px)) and (max-width: calc(#{map-get($breakpoints, large-desktop)} - 1px)) { @content; }// // Desktop
   } 
   
   @else if $breakpoint == "large-desktop" {
@@ -51,24 +52,16 @@ $breakpoints: (
 
 /*Mixins*/
 
-/*@mixin respond-to($breakpoint) {
-  @if $breakpoint == "mobile" {
-    @media (max-width: 767px) { @content; } // Mobil enheder
-  } @else if $breakpoint == "desktop" {
-    @media (min-width: 768px) and (max-width: 1199px) { @content; } // Desktop og op til 1199px
-  } @else if $breakpoint == "large-desktop" {
-    @media (min-width: 1200px) { @content; } // Større end 1200px (store skærme)
-  }
-}*/
-
-@mixin three-column-grid($column-gap: 4px, $row-gap: 4px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker
-  }
-
+//Mobil version
 @mixin two-column-grid($column-gap: 4px, $row-gap: 4px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker
 }
+
+//Desktop version
+@mixin three-column-grid($column-gap: 4px, $row-gap: 4px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $column-gap $row-gap; // Fast margin (mellemrum) mellem kolonner og rækker
+  }
