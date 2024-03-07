@@ -5,13 +5,13 @@
   overflow: hidden; /* Sikrer, at intet indhold går udenfor boksen */
 }
 
-.box-image img {
+.box-hover img {
   width: 100%;
   display: block; /* Fjerner eventuel margin/padding omkring billedet */
   transition: opacity 0.5s ease; /* Glat overgang */
 }
 
-.box-image::after {
+.box-hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -19,11 +19,61 @@
   right: 0;
   bottom: 0;
   background: url("../img/cases/bybi_hover.png") center center no-repeat;
-  background-size: cover; /* Sørger for at baggrundsbilledet dækker hele boksen */
-  opacity: 0; /* Gør pseudo-elementet gennemsigtigt som standard */
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.box-hover:hover::after {
+  opacity: 1;
+}
+
+//
+
+.box-hover2 img {
+  width: 100%;
+  display: block; /* Fjerner eventuel margin/padding omkring billedet */
   transition: opacity 0.5s ease; /* Glat overgang */
 }
 
-.box-image:hover::after {
-  opacity: 1; /* Gør baggrundsbilledet synligt ved hover */
+.box-hover2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/cases/kaffe_hover.png") center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.box-hover2:hover::after {
+  opacity: 1;
+}
+
+//
+
+.box-hover3 img {
+  width: 100%;
+  display: block; /* Fjerner eventuel margin/padding omkring billedet */
+  transition: opacity 0.5s ease; /* Glat overgang */
+}
+
+.box-hover3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/cases/mærsk_hover.png") center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.box-hover3:hover::after {
+  opacity: 1;
 }
