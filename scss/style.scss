@@ -79,7 +79,7 @@
   }
 
   main {
-    // Tilpasninger for hovedsektionen på desktop
+    // Tilpasninger for hovedsektionen på mobil
 
     .box,
     .trust {
@@ -182,7 +182,7 @@
   }
 
   main {
-    // Tilpasninger for hovedsektionen på desktop
+    // Tilpasninger for hovedsektionen på tablet
 
     .box,
     .trust {
@@ -206,7 +206,7 @@
   }
 
   footer {
-    // Tilpasninger for footer på mobil
+    // Tilpasninger for footer på tablet
     h5 {
       font-weight: bolder;
     }
@@ -340,14 +340,12 @@
 
     .desktop-nav {
       grid-column: span 1;
-      display: flex;
-      align-items: center;
 
       ul {
         list-style: none;
         padding: 0;
         display: flex;
-
+        justify-content: space-between;
         .desktop-nav a {
           transition: color 0.3s ease;
           a {
