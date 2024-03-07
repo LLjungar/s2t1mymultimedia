@@ -1,5 +1,1 @@
-// Hej Jonas, dette dokument er din helt egen scss til hover på billeder
-// Det er linked i vores style.scss og importeres der, pga. "_"
-// Dette stylesheet bruger partials til at style basen, 
-// de er linked til med @ herunder
-// ($ er henvisning til de partials du finder i dokumentet _partial)
+@use "partial";

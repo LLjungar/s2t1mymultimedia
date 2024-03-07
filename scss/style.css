@@ -81,49 +81,45 @@ img {
   border: 2px solid #fff;
 }
 
-.contact-form {
-  background-color: aqua;
-  color: aqua;
-  padding: 0.5em;
-  /*
-  @include respond-to("mobile") {
-    form {
-      // Tilpasning til mobil skræmstørrelser
-    }
-  }
-
-  @include respond-to("desktop") {
-    form {
-      // Tilpasning til desktop skærmstørrelser
-    }
-  }*/
-}
 .contact-form form {
-  max-width: 100%;
-}
-.contact-form form label {
-  display: block;
-  margin-bottom: 1px;
+  width: calc(100% + 8px);
+  margin-left: -4px;
+  margin-right: -4px;
 }
 .contact-form form input[type="text"],
 .contact-form form input[type="email"],
 .contact-form form input[type="tel"],
-.contact-form form textarea {
+.contact-form form input[type="kommentar"] {
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 30px;
+  margin: 15px 0 15px 0;
+  background-color: #d9d9d9;
 }
-.contact-form form input[type="text"]:focus,
-.contact-form form input[type="email"]:focus,
-.contact-form form input[type="tel"]:focus,
-.contact-form form textarea:focus {
-  outline: none;
-  border-color: #b0d0ff;
+.contact-form form input[type="kommentar"] {
+  padding-bottom: 60px;
 }
-.contact-form form .special-cta {
-  background-color: aqua;
+.contact-form form button.special-cta {
+  background-color: #b0d0ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 15px;
+  color: #000000;
 }
-.contact-form form .special-cta:hover {
-  background-color: #000000;
+.contact-form form button.special-cta:hover {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+@media (min-width: 1281px) and (max-width: 1920px) {
+  .contact-form form {
+    margin: 0 20px 0 20;
+  }
 }
 
 .box {

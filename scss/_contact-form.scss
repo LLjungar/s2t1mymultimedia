@@ -1,4 +1,4 @@
-@use 'partial';
+@use "partial";
 
 .contact-form {
   form {
@@ -6,36 +6,24 @@
     margin-left: -4px;
     margin-right: -4px;
 
-    label {
-      display: inline-block;
-      width: 100%;
-      background-color: $labelColor;
-      margin-bottom: 4px; // Giver en lille afstand mellem elementerne
-
-      &:not(#kommentar-label) {
-        height: 20px; // Standardhøjde for labels
-      }
-
-      // Specifik stil for "kommentar" label
-      &#kommentar-label {
-        height: 40px; // Dobbelt så høj som de andre labels
-      }
-    }
-
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    textarea {
+    input[type="kommentar"] {
       width: 100%; // Fylder bredden af formen
       box-sizing: border-box; // Sørger for, at padding og border ikke tilføjer ekstra bredde
+      padding-bottom: 30px;
+      margin: 15px 0 15px 0;
+      background-color: #d9d9d9;
+    } // Lukker input og textarea
+
+    input[type="kommentar"] {
+      padding-bottom: 60px;
     }
 
-    textarea {
-      align-self: start; // Dette sikrer, at textarea starter i øverste venstre hjørne
-    }
-
+    //Styler knappen så den ligner de andre cta
     button.special-cta {
-      background-color: $blue; // Bruger variabel for blå farve
+      background-color: partial.$blue; // Bruger variabel for blå farve. Ændret til korrekt SCSS variabel syntaks
       color: #ffffff; // Hvid tekstfarve for bedre læsbarhed
       border: none; // Fjerner standard border
       padding: 10px 20px; // Lidt padding for bedre udseende
@@ -43,6 +31,19 @@
       display: block; // Gør knappen til en block-level element
       width: 100%; // Fylder bredden
       box-sizing: border-box;
+      margin-top: 15px;
+      color: partial.$text-color-box;
+
+      &:hover {
+        background-color: #000; // Baggrundsfarven ændres til sort ved hover
+        color: #fff; // Tekstfarven ændres til hvid ved hover
+        border: 2px solid #fff;
+      } // Lukker &:hover
+    } // Lukker button.special-cta
+    // Lukker form
+
+    @include partial.respond-to("desktop") {
+      margin: 0 20px 0 20;
     }
   }
-}
+} // Lukker .contact-form
