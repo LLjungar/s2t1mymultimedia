@@ -24,3 +24,4 @@ En oversigt over mapper og filer i projektet, og hvad de indeholder:
 
 Jonas Laursen, Ines Johanson, Emma Madsen og Linn Ljungar; dkmmd23c2o. Februar-marts 2024.
 https://github.com/LLjungar/s2t1mymultimedia.git
+http://jonherlau.dk/s2t1mymultimedia-main/html/
